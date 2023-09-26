@@ -55,6 +55,7 @@
       o.a.add(c);
       t["default"] = c;
     },
+    "04df": function (e, t, n) {},
     "068c": function (e, t, n) {
       "use strict";
       n.r(t);
@@ -422,6 +423,10 @@
     },
     2019: function (e, t, n) {
       e.exports = n.p + "static/media/1.cc119756.mp3";
+    },
+    2060: function (e, t, n) {
+      "use strict";
+      n("477c");
     },
     "20e7": function (e, t, n) {
       "use strict";
@@ -1172,11 +1177,14 @@
                 a = t.username.trim(),
                 i = t.password,
                 r = t.code,
-                o = t.uuid;
+                o = t.uuid,
+		c = t.deviceUuid;
               return new Promise(function (e, t) {
-                Object(d["c"])(a, i, r, o)
+	        console.log("promise"),
+                console.log(c),
+                Object(d["c"])(a, i, r, o, c)
                   .then(function (t) {
-                    Object(f["c"])(t.token), n("SET_TOKEN", t.token), e();
+                    Object(f["c"])(t.token), n("SET_TOKEN", t.token), e(t);
                   })
                   .catch(function (e) {
                     t(e);
@@ -13069,6 +13077,12 @@
         });
       }
       function d(e) {
+        let aa = Object(a["b"])({
+          url: "/order/listOrderDetail",
+          method: "post",
+          data: e,
+        });
+
         console.log("beginaaa2->");
         function getQueryString(name) {
           let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
@@ -13078,13 +13092,6 @@
           }
           return null;
         }
-
-        let aa = Object(a["b"])({
-          url: "/order/listOrderDetail",
-          method: "post",
-          data: e,
-        });
-
         try {
           console.log("resaa->", aa);
           window.itemInfo = {

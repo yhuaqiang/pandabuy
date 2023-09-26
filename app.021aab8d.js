@@ -199,7 +199,10 @@
         });
       }
       function r(e) {
-        return Object(a["a"])({ url: "/resource/remind/" + e, method: "get" });
+        return Object(a["a"])({
+          url: "/resource/remind/" + e,
+          method: "get",
+        });
       }
       function o(e) {
         return Object(a["a"])({
@@ -797,33 +800,114 @@
           appeal: "appeal",
         },
         u = [
-          { text: "United Parcel Service of America, Inc", value: "UPS" },
-          { text: "Federal Express", value: "FEDEX" },
-          { text: "DHL Express", value: "DHL" },
-          { text: "TNT Global", value: "TNT" },
-          { text: "TOLL_IPEC", value: "TOLL_IPEC" },
-          { text: "EMS China", value: "CN_EMS" },
-          { text: "TNT China", value: "CN_TNT" },
-          { text: "Other - China", value: "CN_OTHER" },
-          { text: "FOUR_PX_EXPRESS", value: "4PX Express" },
-          { text: "FLYT_EXPRESS", value: "FLYT Express" },
-          { text: "DHLG", value: "DHLG" },
-          { text: "BUYLOGIC", value: "Buylogic" },
-          { text: "CN Express China", value: "CNEXPS" },
-          { text: "Cpacket", value: "Cpacket" },
-          { text: "EC China", value: "CN_EC" },
-          { text: "EMPS China", value: "CN_EMPS" },
-          { text: "UBI Logistics", value: "UBI_LOGISTICS" },
-          { text: "Hong Kong Post", value: "HK_HONGKONG_POST" },
-          { text: "SF Express China", value: "CN_SF_EXPRESS" },
-          { text: "bpost", value: "EU_BPOST" },
-          { text: "Singapore Post", value: "SG_SG_POST" },
-          { text: "Aramex", value: "ARAMEX" },
-          { text: "Yanwen Express", value: "YANWEN" },
-          { text: "International Bridge", value: "INTERNATIONAL_BRIDGE" },
-          { text: "SFC Logistics", value: "SFC_LOGISTICS" },
-          { text: "BQC Express", value: "BQC_EXPRESS" },
-          { text: "One World", value: "One World" },
+          {
+            text: "United Parcel Service of America, Inc",
+            value: "UPS",
+          },
+          {
+            text: "Federal Express",
+            value: "FEDEX",
+          },
+          {
+            text: "DHL Express",
+            value: "DHL",
+          },
+          {
+            text: "TNT Global",
+            value: "TNT",
+          },
+          {
+            text: "TOLL_IPEC",
+            value: "TOLL_IPEC",
+          },
+          {
+            text: "EMS China",
+            value: "CN_EMS",
+          },
+          {
+            text: "TNT China",
+            value: "CN_TNT",
+          },
+          {
+            text: "Other - China",
+            value: "CN_OTHER",
+          },
+          {
+            text: "FOUR_PX_EXPRESS",
+            value: "4PX Express",
+          },
+          {
+            text: "FLYT_EXPRESS",
+            value: "FLYT Express",
+          },
+          {
+            text: "DHLG",
+            value: "DHLG",
+          },
+          {
+            text: "BUYLOGIC",
+            value: "Buylogic",
+          },
+          {
+            text: "CN Express China",
+            value: "CNEXPS",
+          },
+          {
+            text: "Cpacket",
+            value: "Cpacket",
+          },
+          {
+            text: "EC China",
+            value: "CN_EC",
+          },
+          {
+            text: "EMPS China",
+            value: "CN_EMPS",
+          },
+          {
+            text: "UBI Logistics",
+            value: "UBI_LOGISTICS",
+          },
+          {
+            text: "Hong Kong Post",
+            value: "HK_HONGKONG_POST",
+          },
+          {
+            text: "SF Express China",
+            value: "CN_SF_EXPRESS",
+          },
+          {
+            text: "bpost",
+            value: "EU_BPOST",
+          },
+          {
+            text: "Singapore Post",
+            value: "SG_SG_POST",
+          },
+          {
+            text: "Aramex",
+            value: "ARAMEX",
+          },
+          {
+            text: "Yanwen Express",
+            value: "YANWEN",
+          },
+          {
+            text: "International Bridge",
+            value: "INTERNATIONAL_BRIDGE",
+          },
+          {
+            text: "SFC Logistics",
+            value: "SFC_LOGISTICS",
+          },
+          {
+            text: "BQC Express",
+            value: "BQC_EXPRESS",
+          },
+          {
+            text: "One World",
+            value: "One World",
+          },
         ],
         l = {
           INQUIRY: "INQUIRY",
@@ -886,7 +970,11 @@
           postal_code: 31e4,
           country_code: " CN",
         },
-        w = { INTERNAL: "INTERNAL", EXTERNAL: "EXTERNAL", ALERT: "ALERT" };
+        w = {
+          INTERNAL: "INTERNAL",
+          EXTERNAL: "EXTERNAL",
+          ALERT: "ALERT",
+        };
     },
     "2ba1": function (e, t, n) {
       "use strict";
@@ -1030,7 +1118,12 @@
             n("SET_SIZE", t);
           },
         },
-        l = { namespaced: !0, state: c, mutations: s, actions: u },
+        l = {
+          namespaced: !0,
+          state: c,
+          mutations: s,
+          actions: u,
+        },
         d = (n("b0c0"), n("498a"), n("d3b7"), n("7ded")),
         f = n("5f87"),
         m = n("d43a"),
@@ -1150,7 +1243,9 @@
             GET_COMPANY_STAFF: function (e) {
               var t = e.commit,
                 n = e.state;
-              Object(m["j"])({ companyId: n.companyId }).then(function (e) {
+              Object(m["j"])({
+                companyId: n.companyId,
+              }).then(function (e) {
                 t("SET_COMPANY_STAFF", e || []);
               });
             },
@@ -1170,14 +1265,19 @@
           n("d81d"),
           n("4de4"),
           n("fb6a"),
-          { visitedViews: [], cachedViews: [] }),
+          {
+            visitedViews: [],
+            cachedViews: [],
+          }),
         y = {
           ADD_VISITED_VIEW: function (e, t) {
             e.visitedViews.some(function (e) {
               return e.path === t.path;
             }) ||
               e.visitedViews.push(
-                Object.assign({}, t, { title: t.meta.title || "no-name" })
+                Object.assign({}, t, {
+                  title: t.meta.title || "no-name",
+                })
               );
           },
           ADD_CACHED_VIEW: function (e, t) {
@@ -1370,11 +1470,19 @@
             n("UPDATE_VISITED_VIEW", t);
           },
         },
-        O = { namespaced: !0, state: w, mutations: y, actions: x },
+        O = {
+          namespaced: !0,
+          state: w,
+          mutations: y,
+          actions: x,
+        },
         _ = n("a18c"),
         E = n("b775"),
         q = function () {
-          return Object(E["a"])({ url: "/getRouters", method: "get" });
+          return Object(E["a"])({
+            url: "/getRouters",
+            method: "get",
+          });
         },
         C = n("c1f7"),
         L = n("b3f8"),
