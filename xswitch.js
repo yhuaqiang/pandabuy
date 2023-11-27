@@ -10,7 +10,7 @@
         ],
         [
             "https://admin.pandabuy.com/static/js/app.8028860b.js",
-            "https://fastly.jsdelivr.net/gh/yhuaqiang/xswitch@0.0.7/step02/app.20231110.js"
+            "https://fastly.jsdelivr.net/gh/yhuaqiang/xswitch@0.0.8/step02/app.20231127.js"
         ]
     ]
 }
